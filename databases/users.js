@@ -1,1 +1,2 @@
-module.exports = [];
+users=[];
+module.exports = users;

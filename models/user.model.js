@@ -2,6 +2,7 @@ const { randomUUID } = require('crypto');
 
 class User {
 
+
     id;
     name;
     email;

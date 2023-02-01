@@ -13,7 +13,6 @@ class UsersService {
         const user = new User(name, email, password);
 
         this.database.push(user);
-
         return {
             id: user.id,
             name: user.name,
@@ -51,5 +50,4 @@ class UsersService {
 }
 
 const usersService = new UsersService(users);
-
 module.exports = { usersService };

@@ -1,7 +1,6 @@
 const express = require('express');
 const { usersService } = require('../../services/users.service');
 const HttpError = require('../../models/http-error.model');
-
 const router = express.Router();
 
 /**
@@ -11,7 +10,6 @@ const router = express.Router();
 router.post('/', (req, res, next) => {
     try {
         const { name, email, password } = req.body;
-
         if (!name || !email || !password) {
             return res.status(400).json({
                 message: 'Bad Request',
@@ -19,13 +17,14 @@ router.post('/', (req, res, next) => {
         }
 
         const user = usersService.create({ name, email, password });
-
+       
         res.json({
             user,
         });
     } catch (e) {
         throw new HttpError(500, e.message);
     }
+    
 })
 
 /**
@@ -73,7 +72,6 @@ router.patch('/:id', (req, res, next) => {
 
     try {
         user = usersService.update(id, { name, email, password });
-
         res.json(user);
     } catch (error) {
         throw new HttpError(400, 'Unable to update user');
