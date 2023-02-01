@@ -54,7 +54,6 @@ router.get('/:id', (req, res, next) => {
         throw new HttpError(404, error.message);
     }
 });
-
 /**
  * A PATCH route to handle the updating of a single user in the database.
  */

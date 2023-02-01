@@ -1,2 +1,1 @@
-tokens=[]
-module.exports = tokens;
+module.exports = [];

@@ -24,6 +24,7 @@ app.use('/users', authRouter);
 app.use(errorHandlerMiddleware);
 
 
+
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });

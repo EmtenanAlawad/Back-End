@@ -49,5 +49,6 @@ class UsersService {
     }
 }
 
+
 const usersService = new UsersService(users);
 module.exports = { usersService };

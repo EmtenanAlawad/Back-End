@@ -70,7 +70,6 @@ constructor(database,userService) {
 
           return user; 
       }
-
 }
 
  const authService = new AuthService(tokens,usersService);
